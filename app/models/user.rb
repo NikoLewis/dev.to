@@ -117,7 +117,10 @@ class User < ApplicationRecord
                          message: "%{value} must be either default, pink theme, or night theme" }
   validates :config_font,
             inclusion: { in: %w[default sans_serif comic_sans],
-                         message: "%{value} must be either default or sans serif" }
+                         message: "%{value} must be either default, comic sans or sans serif" }
+  validates :config_font_size,
+            inclusion: { in: %w[default small large],
+                         message: "%{value} must be either default, small, or large" }
   validates :shipping_country,
             length: { in: 2..2 },
             allow_blank: true

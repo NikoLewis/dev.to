@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_04_131412) do
+ActiveRecord::Schema.define(version: 2019_07_20_191344) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -827,6 +827,7 @@ ActiveRecord::Schema.define(version: 2019_05_04_131412) do
     t.boolean "checked_code_of_conduct", default: false
     t.integer "comments_count", default: 0, null: false
     t.string "config_font", default: "default"
+    t.string "config_font_size", default: "default"
     t.string "config_theme", default: "default"
     t.datetime "confirmation_sent_at"
     t.string "confirmation_token"
